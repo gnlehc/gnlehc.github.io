@@ -11,7 +11,7 @@ menuToggle.addEventListener("click", () => {
   sidebar.classList.toggle("hidden");
 });
 
-const token = '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';
+const token = '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';
 const username = 'gnlehc';
 const query = `
   query {
