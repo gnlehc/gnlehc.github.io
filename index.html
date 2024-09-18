@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chel's Portfolio</title>
-    <link rel="icon" href="src/assets/portoprofile.png" />
+    <!-- <link rel="icon" href="src/assets/portoprofile.png" /> -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" />
@@ -107,10 +107,10 @@
           </div>
         </div>
         <div
-          class="w-full md:w-80 p-6 bg-black rounded text-white transition ease-in-out delay-75 transform hover:-translate-y-2 shadow-lg">
-          <div class="flex flex-col gap-14">
+          class="mx-8 w-full md:w-80 p-6 border-4 rounded bg-black rounded text-white transition ease-in-out delay-75 transform hover:-translate-y-2 shadow-lg">
+          <div class="flex flex-col gap-12">
             <p class="text-center md:text-left">Contact</p>
-            <div class="flex flex-row gap-24 justify-center md:justify-start">
+            <div class="flex flex-row gap-20 justify-center md:justify-start">
               <a class="underline" href="mailto:chelseang40@gmail.com"
                 >Connect with me</a
               >
@@ -146,10 +146,10 @@
           <div
             class="p-4 bg-white rounded shadow-md md:w-1/3 transition ease-in-out delay-75 transform hover:-translate-y-2">
             <div class="flex items-center gap-4">
-              <img
+              <!-- <img
                 src="/src/assets/portoprofile.png"
                 class="w-24 md:w-48 m-auto"
-                alt="" />
+                alt="" /> -->
             </div>
           </div>
           <div
@@ -208,6 +208,12 @@
         </div>
       </section> -->
 
+      <section id="Experience" class="container max-w-6xl m-auto">
+        <div class="max-w-5xl mx-auto"></div>
+          <p class="text-4xl font-bold text-left">Experiences</p>
+        </div>
+      </section>
+
       <section id="Project" class="container max-w-6xl m-auto">
         <div class="max-w-5xl mx-auto">
           <p class="text-4xl font-bold text-left">Projects</p>
@@ -217,75 +223,58 @@
           id="projectsContainer">
           <div class="border border-gray-300 p-4 rounded-md shadow-md">
             <img
-              src="/src/assets/porto/Screenshot 2023-08-21 160546.png"
+              src="/src/assets/porto/DestinationExplorer_Cover.jpg"
               class="rounded mb-4"
               alt="" />
-            <h2 class="text-lg font-semibold">Technoscape 2023</h2>
-            <p class="mt-2">Techno academy, Techno conference and Hackathon</p>
-            <a
+            <h2 class="text-lg font-semibold">Grab A.I. Destination Explorer</h2>
+            <p class="mt-2">Top 5 HackJakarta Digital Empowerment Competition 2024. This is a recommender system for user to be able searching any places to go with ambience and any description of it. </p>
+            <div class="my-2">
+              <a
               class="mt-2 text-blue-500"
-              href="https://github.com/gnlehc/compfest-SEANEMA"
+              href="https://github.com/gnlehc/Destination-Explorer-SolaGratia.git"
               target="_blank"
               >View on GitHub</a
             >
+            </div>
           </div>
+
+          <div class="border border-gray-300 p-4 rounded-md shadow-md flex flex-col">
+            <img
+              src="/src/assets/porto/Libeery_Cover.png"
+              class="rounded mb-4"
+              alt="" />
+            <h2 class="text-lg font-semibold">Libeery</h2>
+            <p class="mt-2">Software Engineering Project as a Scrum Master and Developer, 2024.</p>
+            <div class="my-2">
+              <a
+                class="mt-2 text-blue-500" 
+                href="https://github.com/gnlehc/Libeery-API.git"
+                target="_blank"
+                >Link to API Repository</a>
+              <br>
+              <a
+                class="mt-2 text-blue-500" 
+                href="https://github.com/gnlehc/Libeery-App.git"
+                target="_blank"
+                >Link to App Repository</a>
+            </div>
+          </div>
+
           <div class="border border-gray-300 p-4 rounded-md shadow-md">
-            <img src="" alt="" />
-            <h2 class="text-lg font-semibold">BNCC Opening Season</h2>
+            <img src="/src/assets/porto/Preform_Cover.png" class="rounded mb-4" alt="" />
+            <h2 class="text-lg font-semibold">Preform</h2>
             <p class="mt-2">
               Creating a website for freshmen to select courses, schedule
               classes, and make payments.
             </p>
-            <a
+            <div class="my-2">
+              <a
               class="mt-2 text-blue-500"
-              href="https://github.com/gnlehc/compfest-SEANEMA"
+              href="https://github.com/gnlehc/Preform.git"
               target="_blank"
               >View on GitHub</a
             >
-          </div>
-          <div class="border border-gray-300 p-4 rounded-md shadow-md">
-            <img src="" alt="" />
-            <h2 class="text-lg font-semibold">Seanema</h2>
-            <p class="mt-2">
-              Movie Ticketing website using ReactJs and Firestore (firebase)
-            </p>
-            <a
-              class="mt-2 text-blue-500"
-              href="https://github.com/gnlehc/compfest-SEANEMA"
-              target="_blank"
-              >View on GitHub</a
-            >
-          </div>
-          <div class="border border-gray-300 p-4 rounded-md shadow-md">
-            <h2 class="text-lg font-semibold">E-Commerce Website</h2>
-            <p class="mt-2">Using Flutter and FakeStore API</p>
-            <a
-              class="mt-2 text-blue-500"
-              href="https://github.com/gnlehc/ProjectITDIVFLutter"
-              target="_blank"
-              >View on GitHub</a
-            >
-          </div>
-          <div class="border border-gray-300 p-4 rounded-md shadow-md">
-            <h2 class="text-lg font-semibold">API Using ASP.NET</h2>
-            <p class="mt-2">API Student Management Using LinQ</p>
-            <a
-              class="mt-2 text-blue-500"
-              href="https://github.com/gnlehc/CSharpAPI"
-              target="_blank"
-              >View on GitHub</a
-            >
-          </div>
-          <div class="border border-gray-300 p-4 rounded-md shadow-md">
-            <img src="" alt="" />
-            <h2 class="text-lg font-semibold">Express Js API</h2>
-            <p class="mt-2">Library forum API</p>
-            <a
-              class="mt-2 text-blue-500"
-              href="https://github.com/gnlehc/Library-API"
-              target="_blank"
-              >View on GitHub</a
-            >
+            </div>
           </div>
         </div>
       </section>
