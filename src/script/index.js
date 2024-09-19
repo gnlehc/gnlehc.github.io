@@ -11,8 +11,9 @@ menuToggle.addEventListener("click", () => {
   sidebar.classList.toggle("hidden");
 });
 
-const token = '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';
-const username = 'gnlehc';
+const token =
+  "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";
+const username = "gnlehc";
 const query = `
   query {
     user(login: "${username}") {
@@ -29,21 +30,21 @@ const query = `
   }
 `;
 
-fetch('https://api.github.com/graphql', {
-  method: 'POST',
+fetch("https://api.github.com/graphql", {
+  method: "POST",
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
     Authorization: `Bearer ${token}`,
   },
   body: JSON.stringify({ query }),
 })
-  .then(response => response.json())
-  .then(data => {
-    const projectsContainer = document.getElementById('projectsContainer');
+  .then((response) => response.json())
+  .then((data) => {
+    const projectsContainer = document.getElementById("projectsContainer");
     const projects = data.data.user.pinnedItems.nodes;
 
-    projects.forEach(project => {
-      const projectElement = document.createElement('div');
+    projects.forEach((project) => {
+      const projectElement = document.createElement("div");
       projectElement.innerHTML = `
         <div class="border border-gray-300 p-4 rounded-md shadow-md">
           <h2 class="text-lg font-semibold">${project.name}</h2>
@@ -55,8 +56,8 @@ fetch('https://api.github.com/graphql', {
       projectsContainer.appendChild(projectElement);
     });
   })
-  .catch(error => {
-    console.error('Error fetching GitHub projects:', error);
+  .catch((error) => {
+    console.error("Error fetching GitHub projects:", error);
   });
 
 // const token = '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'
@@ -261,7 +262,6 @@ fetch('https://api.github.com/graphql', {
 // }
 
 // fetchGitHubProjects();
-
 
 // const token = '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';
 
