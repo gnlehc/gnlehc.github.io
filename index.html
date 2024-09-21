@@ -16,17 +16,21 @@
   >
     <div class="flex flex-col gap-28">
       <!-- Header -->
-      <header class="md:hidden bg-white p-4 fixed top-0 left-0 z-10 w-full">
+      <header
+        class="md:hidden bg-white p-4 fixed top-0 left-0 z-10 w-full shadow-lg"
+      >
         <div class="flex items-center justify-between">
-          <button id="menu-toggle" class="text-xl p-2">
+          <button id="menu-toggle" class="text-xl p-2 focus:outline-none">
             <svg
-              class="w-6 h-6"
+              id="menu-icon"
+              class="w-8 h-8 transition-transform transform"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
+                id="menu-icon-path"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
@@ -34,32 +38,45 @@
               ></path>
             </svg>
           </button>
-          <a class="text-base">Chel's Portfolio</a>
+          <a class="text-base font-semibold">Chel's Portfolio</a>
         </div>
       </header>
+
+      <!-- Full-screen overlay -->
       <aside
         id="sidebar"
-        class="md:w-1/4 bg-white md:absolute md:top-0 md:left-0 md:transform md:translate-x-0 transition duration-300 ease-in-out hidden"
+        class="fixed inset-0 bg-black bg-opacity-80 z-20 transform -translate-x-full transition-transform duration-300 ease-in-out"
       >
-        <div class="flex flex-col h-full p-8 space-y-8">
-          <div class="flex flex-col items-center">
-            <a class="text-2xl font-bold hidden">Chel's Portfolio</a>
-            <div class="mt-10 space-y-10">
-              <a
-                href="https://www.linkedin.com/in/gnlehc"
-                class="text-base underline"
-                >LinkedIn</a
-              >
-              <a href="https://github.com/gnlehc" class="text-base underline"
-                >Github</a
-              >
-            </div>
-          </div>
-          <div>
-            <p class="text-center text-sm text-purple-950">
-              Jakarta, Indonesia
-            </p>
-          </div>
+        <div
+          class="flex flex-col items-center justify-center h-full space-y-8 text-white"
+        >
+          <button id="menu-close" class="absolute top-6 right-6 text-white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+          <a
+            href="https://www.linkedin.com/in/gnlehc"
+            class="text-lg hover:text-purple-400 transition ease-in-out"
+            >LinkedIn</a
+          >
+          <a
+            href="https://github.com/gnlehc"
+            class="text-lg hover:text-purple-400 transition ease-in-out"
+            >Github</a
+          >
+          <a class="text-lg">Jakarta, Indonesia</a>
         </div>
       </aside>
 
@@ -85,9 +102,9 @@
 
       <!-- Landing Body -->
       <div
-        class="container mt-12 mb-20 flex flex-col gap-10 lg:gap-12 m-auto relative"
+        class="container mt-12 mb-12 md:mb-16 lg:mb-18 flex flex-col gap-10 lg:gap-10 m-auto relative"
       >
-        <div class="m-auto text-center">
+        <div class="m-auto text-center mt-20 md:mt-0">
           <p class="text-8xl">Chelsea Ng</p>
         </div>
         <div class="flex flex-row md:flex-row gap-10 m-auto">
@@ -95,15 +112,17 @@
           <p class="text-center md:text-left">Engineer</p>
         </div>
       </div>
-      <div class="flex flex-col md:flex-row justify-between gap-0 md:gap-10">
-        <div class="m-auto top-0 ml-6 mb-0 text-center md:text-left">
+      <div
+        class="flex flex-col md:flex-row justify-between gap-0 md:gap-10 p-6"
+      >
+        <div class="m-auto md:ml-6 mb-4 text-center md:text-left">
           <p>Chel's</p>
           <p class="text-sm">© 2023 All rights reserved.</p>
         </div>
         <div
           class="w-full md:w-96 p-6 border-4 rounded hover:bg-black hover:text-white transition ease-in-out shadow-lg delay-75 transform hover:-translate-y-2"
         >
-          <div class="m-auto md:text-justify">
+          <div class="m-auto text-center md:text-justify">
             <p>
               Hey there! 👋 I'm an enthusiastic problem-solver with a passion
               for continuous learning and a strong sense of perseverance.
@@ -111,16 +130,18 @@
           </div>
         </div>
         <div
-          class="mx-8 w-full md:w-96 p-6 border-4 rounded bg-black text-white transition ease-in-out delay-75 transform hover:-translate-y-2 shadow-lg"
+          class="w-full md:w-96 p-6 border-4 rounded bg-black text-white transition ease-in-out delay-75 transform hover:-translate-y-2 shadow-lg mt-6 md:mt-0"
         >
-          <div class="flex flex-col gap-16">
+          <div class="flex flex-col gap-8 md:gap-16">
             <p class="text-center md:text-left">Contact</p>
-            <div class="flex flex-row gap-36 justify-center md:justify-start">
+            <div
+              class="flex flex-col gap-4 md:flex-row md:gap-36 justify-center md:justify-start"
+            >
               <a class="underline" href="mailto:chelseang40@gmail.com"
                 >Connect with me</a
               >
               <svg
-                class="cursor-pointer"
+                class="cursor-pointer m-auto md:m-0"
                 xmlns="http://www.w3.org/2000/svg"
                 width="33"
                 height="28"
@@ -149,7 +170,7 @@
 
       <!-- About Me -->
       <section
-        class="flex flex-col items-center gap-8 max-w-5xl mx-auto mt-12 p-4"
+        class="flex flex-col items-center gap-8 max-w-5xl mx-auto mt-2 p-4"
       >
         <p class="text-4xl font-bold">About Me</p>
         <div class="flex flex-col md:flex-row md:justify-between gap-8 w-full">
